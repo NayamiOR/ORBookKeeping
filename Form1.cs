@@ -12,7 +12,6 @@ namespace OR记账
 {
     public partial class Form1 : Form
     {
-        
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +21,7 @@ namespace OR记账
                 {
                     a.Visible = false;
                 }
-                if (a.Name == "panel1")
+                if (a.Name == "panel1"||a.Name=="panel4")
                     a.Visible = true;
             }
         }
@@ -30,8 +29,9 @@ namespace OR记账
         {
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel1")
+                if (a.Name == "panel1"||a.Name == "panel4")
                     a.Visible = true;
+                else a.Visible = false;
             }
         }
 
@@ -39,17 +39,20 @@ namespace OR记账
         {
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel2")
+                if (a.Name == "panel2||a.Name == panel4")
                     a.Visible = true;
+                else a.Visible = false;
             }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel3")
+                if (a.Name == "panel3||a.Name == panel4")
                     a.Visible = true;
+                else a.Visible = false;
             }
         }
 
@@ -57,14 +60,20 @@ namespace OR记账
         {
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel4")
+                if (a.Name == "panel4||a.Name == panel4")
                     a.Visible = true;
+                else a.Visible = false;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             new Form2().ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

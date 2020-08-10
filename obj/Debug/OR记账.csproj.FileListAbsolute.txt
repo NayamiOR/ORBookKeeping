@@ -9,3 +9,7 @@ C:\Users\Administrator\source\repos\OR记账\OR记账\obj\Debug\OR记账.csproj.
 C:\Users\Administrator\source\repos\OR记账\OR记账\obj\Debug\OR记账.exe
 C:\Users\Administrator\source\repos\OR记账\OR记账\obj\Debug\OR记账.pdb
 C:\Users\Administrator\source\repos\OR记账\OR记账\obj\Debug\OR记账.Form2.resources
+C:\Users\Administrator\source\repos\OR记账\OR记账\bin\Debug\expend.mdf
+C:\Users\Administrator\source\repos\OR记账\OR记账\bin\Debug\expend_log.ldf
+C:\Users\Administrator\source\repos\OR记账\OR记账\bin\Debug\income.mdf
+C:\Users\Administrator\source\repos\OR记账\OR记账\bin\Debug\income_log.ldf

@@ -7,14 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace OR记账
 {
     public partial class Form2 : Form
     {
+        String strCon = "Data Source=210.45.***.**;Initial Catalog=Energy2;User ID=EnergyUser;Password=*******";
         public Form2()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(strCon);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = null;
+            textBox1.Text = null;
+            textBox3.Text = null;
+            comboBox1.Text = null;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
