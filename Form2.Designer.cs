@@ -74,6 +74,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "yyyy年mm月";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(85, 20);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
@@ -131,7 +133,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(377, 59);
+            this.textBox3.Location = new System.Drawing.Point(377, 69);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(174, 87);
@@ -171,7 +173,8 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(69, 124);
+            this.radioButton2.Checked = true;
+            this.radioButton2.Location = new System.Drawing.Point(68, 125);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(47, 16);
             this.radioButton2.TabIndex = 14;

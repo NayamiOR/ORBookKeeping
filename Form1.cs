@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -100,7 +101,8 @@ namespace OR记账
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form2().ShowDialog();
+            Form2 frm2 = new Form2();
+            frm2.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
