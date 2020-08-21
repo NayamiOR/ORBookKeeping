@@ -13,7 +13,6 @@ namespace OR记账
 {
     public partial class Form2 : Form
     {
-        String strCon = "Data Source=210.45.***.**;Initial Catalog=Energy2;User ID=EnergyUser;Password=*******";
         public Form2()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace OR记账
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(strCon);
+
         }
 
         private void button2_Click(object sender, EventArgs e)

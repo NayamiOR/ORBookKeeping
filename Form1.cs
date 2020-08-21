@@ -21,7 +21,7 @@ namespace OR记账
                 {
                     a.Visible = false;
                 }
-                if (a.Name == "panel1"||a.Name=="panel4")
+                if (a.Name == "panel1")
                     a.Visible = true;
             }
         }
@@ -29,9 +29,17 @@ namespace OR记账
         {
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel1"||a.Name == "panel4")
-                    a.Visible = true;
-                else a.Visible = false;
+                if (a is Panel)
+                {
+                    if (a.Name == "panel1")
+                    {
+                        a.Visible = true;
+                    }
+                    else
+                    {
+                        a.Visible = false;
+                    }
+                }
             }
         }
 
@@ -39,20 +47,35 @@ namespace OR记账
         {
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel2||a.Name == panel4")
-                    a.Visible = true;
-                else a.Visible = false;
+                if (a is Panel)
+                {
+                    if (a.Name == "panel2")
+                    {
+                        a.Visible = true;
+                    }
+                    else
+                    {
+                        a.Visible = false;
+                    }
+                }
             }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel3||a.Name == panel4")
-                    a.Visible = true;
-                else a.Visible = false;
+                if (a is Panel)
+                {
+                    if (a.Name == "panel3")
+                    {
+                        a.Visible = true;
+                    }
+                    else
+                    {
+                        a.Visible = false;
+                    }
+                }
             }
         }
 
@@ -60,9 +83,17 @@ namespace OR记账
         {
             foreach (Control a in this.Controls)
             {
-                if (a.Name == "panel4||a.Name == panel4")
-                    a.Visible = true;
-                else a.Visible = false;
+                if (a is Panel)
+                {
+                    if (a.Name == "panel4")
+                    {
+                        a.Visible = true;
+                    }
+                    else
+                    {
+                        a.Visible = false;
+                    }
+                }
             }
         }
 
