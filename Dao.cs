@@ -8,7 +8,7 @@ namespace OR记账
         public SqlConnection connect()
         {
             string str = @"Data Source=WIN-9K9BN29CRV8;Initial Catalog=BookKeeping;Integrated Security=True";
-            SqlConnection sc = new SqlConnection(str);
+            sc = new SqlConnection(str);
             sc.Open();
             return sc;
         }
