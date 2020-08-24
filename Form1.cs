@@ -109,19 +109,10 @@ namespace OR记账
         {
             new Form2().ShowDialog();
         }
-        //从数据库读取数据并显示
+        //读取数据并显示
         public void Table()
         {
-            this.dataGridView1.Rows.Clear();
-            Dao dao = new Dao();
-            string sql = "select * from Table_3";
-            IDataReader dc = dao.read(sql);
-            while (dc.Read())
-            {
-                dataGridView1.Rows.Add(dc[0].ToString(),dc[1].ToString(), dc[2].ToString(), dc[3].ToString(), dc[4].ToString(), dc[5].ToString(), dc[6].ToString());
-            }
-            dc.Close();
-            dao.DaoClose();
+
         }
     }
 }

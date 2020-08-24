@@ -13,14 +13,16 @@ namespace OR记账
 {
     public partial class Form2 : Form
     {
-        int radioValue=0;
+        int radioValue = 0;
         public Form2()
         {
             InitializeComponent();
+            clean();
         }
-
+        //新建
         private void button1_Click(object sender, EventArgs e)
         {
+            int ID = 114514;
             //取得radiobutton的结果决定是收入还是支出
             if (radioButton1.Checked == true)
             {
@@ -30,33 +32,13 @@ namespace OR记账
             {
                 radioValue = 0;
             }
-            int ID=114514;
-            Dao dao = new Dao();
-            string getID = $"select Max(ID) ID from Table_3";
-            IDataReader IDReader = dao.read(getID);
-
-            while (IDReader.Read())
-            {
-                ID = int.Parse(IDReader["ID"].ToString());
-                ++ID;
-            }
-            string sql = $"insert into table_3 values('{ID}','{dateTimePicker1.Value}','{textBox2.Text}','{comboBox1.Text}','{radioValue}','{textBox1.Text}','{textBox3.Text}')";
-            int n = dao.Execute(sql);
-            if (n > 0)
-            {
-                MessageBox.Show("添加成功");
-            }
-            else
-            {
-                MessageBox.Show("添加失败");
-            }
-            this.Close();
+            checkEmpty();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             clean();
         }
+        //清空
         public void clean()
         {
             textBox2.Text = " ";
@@ -64,9 +46,15 @@ namespace OR记账
             textBox3.Text = " ";
             comboBox1.Text = " ";
         }
+        public void checkEmpty()
+        {
+            if (textBox2.Text == " " || textBox1.Text == " " || textBox3.Text == " " || comboBox1.Text == " ")
+                MessageBox.Show("您有未填的账目信息，请填写后提交");
+        }    
+
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-    }
+    }  
 }
